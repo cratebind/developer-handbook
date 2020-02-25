@@ -181,14 +181,16 @@ const MDXRuntimeTest = ({ isEditing, setIsEditing, ...props }) => {
       </Helmet>
       <div className={'titleWrapper'}>
         <h1 className={'title'}>{mdx.fields.title}</h1>
-        <Edit className={'mobileView'}>
-          <button
-            className={'gitBtn'}
-            onClick={() => setIsEditing(prev => !prev)}
-          >
-            {isEditing ? 'Save' : 'Edit'}
-          </button>
-        </Edit>
+        {process.env.NODE_ENV === 'production' && (
+          <Edit className={'mobileView'}>
+            <button
+              className={'gitBtn'}
+              onClick={() => setIsEditing(prev => !prev)}
+            >
+              {isEditing ? 'Save' : 'Edit'}
+            </button>
+          </Edit>
+        )}
       </div>
       <div className={'mainWrapper'}>
         <TinaField name="rawMdxBody" Component={StyledEditor}>
