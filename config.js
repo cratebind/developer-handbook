@@ -1,16 +1,15 @@
 const config = {
   gatsby: {
     pathPrefix: '/',
-    siteUrl: 'https://learn.hasura.io',
+    siteUrl: 'https://cratebind-developer-handbook.netlify.com/',
     gaTrackingId: null,
     trailingSlash: false,
   },
   header: {
-    logo:
-      'https://graphql-engine-cdn.hasura.io/learn-hasura/assets/homepage/favicon.png',
-    logoLink: 'https://learn.hasura.io',
-    title: 'Gatsby Gitbook Boilerplate',
-    githubUrl: 'https://github.com/hasura/gatsby-gitbook-boilerplate',
+    logo: 'https://cratebind.com/cratebind-map-marker.svg',
+    logoLink: 'https://cratebind-developer-handbook.netlify.com/',
+    title: 'Cratebind Dev Handbook',
+    githubUrl: 'https://github.com/cratebind/developer-handbook',
     helpUrl: '',
     tweetText: '',
     links: [{ text: '', link: '' }],
@@ -30,13 +29,14 @@ const config = {
     collapsedNav: [
       '/codeblock', // add trailing slash if enabled above
     ],
-    links: [{ text: 'Hasura', link: 'https://hasura.io' }],
+    // links: [{ text: 'Hasura', link: 'https://hasura.io' }],
+    links: [],
     frontline: false,
     ignoreIndex: true,
   },
   siteMetadata: {
-    title: 'Gatsby Gitbook Boilerplate | Hasura',
-    description: 'Documentation built with mdx. Powering learn.hasura.io ',
+    title: 'Cratebind Developer Handbook',
+    description: 'Cratebind Developer Handbook',
     ogImage: null,
     docsLocation:
       'https://github.com/hasura/gatsby-gitbook-boilerplate/tree/master/content',
@@ -45,8 +45,8 @@ const config = {
   pwa: {
     enabled: false, // disabling this will also remove the existing service worker.
     manifest: {
-      name: 'Gatsby Gitbook Starter',
-      short_name: 'GitbookStarter',
+      name: 'Cratebind Developer Handbook',
+      short_name: 'CratebindDevHandbook',
       start_url: '/',
       background_color: '#6b37bf',
       theme_color: '#6b37bf',

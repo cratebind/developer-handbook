@@ -64,7 +64,7 @@ a:hover {
   display: inline-block;
 }
 .navBarToggle {
-  border: 1px solid #fff;
+  /* border: 1px solid rgb(36, 42, 49); */
   border-radius: 4px;
   width: 36px;
   height: 33px;
@@ -80,7 +80,7 @@ a:hover {
   border-radius: 1px;
   margin: 0 auto;
   margin-top: 4px;
-  background-color: #fff;
+  background-color: rgb(157, 170, 182);
 }
 .navBarToggle .iconBar:first-child {
   margin-top: 0px;
@@ -261,10 +261,10 @@ a:hover {
   border: 0;
   display: flex;
   align-items: center;
-  box-shadow: -1px 0px 4px 1px rgba(175,158,232,.4);
-  -webkit-box-shadow: -1px 0px 4px 1px rgba(175,158,232,.4);
-  -moz-box-shadow: -1px 0px 4px 1px rgba(175,158,232,.8);
-  -o-box-shadow: -1px 0px 4px 1px rgba(175,158,232,.4);
+  box-shadow: rgba(116, 129, 141, 0.25) 0px 3px 8px 0px;
+  -webkit-box-shadow: rgba(116, 129, 141, 0.25) 0px 3px 8px 0px;
+  -moz-box-shadow: rgba(116, 129, 141, 0.25) 0px 3px 8px 0px;
+  -o-box-shadow: rgba(116, 129, 141, 0.25) 0px 3px 8px 0px;
   z-index: 1;
   padding: 15px;
   position: relative;
@@ -370,6 +370,12 @@ blockquote {
 
 .sideBarUL {
   margin-top: 32px;
+}
+
+@media only screen and (max-width: 992px) {
+  .sideBarUL {
+    margin-top: 10px;
+  }
 }
 
 .sideBarUL li {
@@ -832,7 +838,7 @@ img {
     margin-top: 15px;
     position: relative;
     padding-bottom: 20px;
-    border-top: 1px solid #fff;
+    /* border-top: 1px solid grey; */
   }
   .headerTitle {
     padding-right: 50px;

@@ -104,7 +104,6 @@ const Header = ({ location }) => (
             <div id="navbar" className={'topnav'}>
               <div className={'visibleMobile'}>
                 <Sidebar location={location} />
-                <hr />
                 {isSearchEnabled ? (
                   <div className={'searchWrapper'}>
                     <LoadableComponent
@@ -163,6 +162,7 @@ const Header = ({ location }) => (
                       href={githubUrl}
                       data-show-count="true"
                       aria-label="Star on GitHub"
+                      data-size="large"
                     >
                       Star
                     </GitHubButton>

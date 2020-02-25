@@ -80,8 +80,8 @@ const Sidebar = styled('aside')`
   }
   @media only screen and (max-width: 767px) {
     padding-left: 0px;
-    background-color: #372476;
-    background: #372476;
+    /* background-color: #372476; */
+    /* background: #372476; */
     height: auto;
   }
 `;
@@ -123,7 +123,7 @@ const SidebarLayout = ({ location }) => (
         <Sidebar>
           <ul className={'sideBarUL'}>
             <Tree edges={allMdx.edges} />
-            <Divider />
+            {config.sidebar.links.length > 0 && <Divider />}
             {config.sidebar.links.map((link, key) => {
               if (link.link !== '' && link.text !== '') {
                 return (
