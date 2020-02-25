@@ -181,7 +181,7 @@ const MDXRuntimeTest = ({ isEditing, setIsEditing, ...props }) => {
       </Helmet>
       <div className={'titleWrapper'}>
         <h1 className={'title'}>{mdx.fields.title}</h1>
-        {process.env.NODE_ENV === 'production' && (
+        {process.env.NODE_ENV !== 'production' && (
           <Edit className={'mobileView'}>
             <button
               className={'gitBtn'}
