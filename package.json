@@ -14,6 +14,8 @@
     "@mdx-js/react": "^1.5.1",
     "@philpl/buble": "^0.19.7",
     "@playlyfe/gql": "^2.6.2",
+    "@tinacms/fields": "^0.5.1",
+    "@tinacms/form-builder": "^0.2.15",
     "algoliasearch": "^3.35.1",
     "dotenv": "^8.2.0",
     "emotion": "^10.0.23",
@@ -58,10 +60,13 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "start": "gatsby develop",
-    "build": "gatsby build --prefix-paths"
+    "dev": "gatsby develop",
+    "build": "gatsby build",
+    "lint": "yarn eslint . --fix --ignore-path .gitignore"
   },
   "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-cratebind": "^3.0.5",
     "gatsby-plugin-remove-trailing-slashes": "^2.1.17",
     "prism-react-renderer": "^1.0.2"
   }

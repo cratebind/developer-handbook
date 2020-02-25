@@ -1,6 +1,6 @@
-import React from "react";
-import { Link as GatsbyLink } from "gatsby";
-import isAbsoluteUrl from "is-absolute-url";
+import React from 'react';
+import { Link as GatsbyLink } from 'gatsby';
+import isAbsoluteUrl from 'is-absolute-url';
 
 const Link = ({ to, ...props }) =>
   isAbsoluteUrl(to) ? (
