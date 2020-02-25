@@ -4,6 +4,8 @@ import { graphql } from "gatsby";
 import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer";
 import styled from "@emotion/styled";
 import { Layout, Link } from "$components";
+import { useLocalMdxForm } from 'gatsby-tinacms-mdx'
+
 import NextPrevious from '../components/NextPrevious';
 import '../components/styles.css';
 import config from '../../config';
@@ -36,9 +38,11 @@ const Edit = styled('div')`
   }
 `;
 
-export default class MDXRuntimeTest extends Component {
-  render() {
-    const { data } = this.props;
+const MDXRuntimeTest = (props) => {
+    console.log({ props });
+  const { data } = props;
+  const res = useLocalMdxForm(data.mdx);
+  console.log({ res })
     if(!data) {
       return null;
     }
@@ -98,7 +102,7 @@ export default class MDXRuntimeTest extends Component {
     canonicalUrl = canonicalUrl + mdx.fields.slug;
 
     return (
-      <Layout {...this.props}>
+      <Layout {...props}>
         <Helmet>
           {metaTitle ? <title>{metaTitle}</title> : null }
           {metaTitle ? <meta name="title" content={metaTitle} /> : null}
@@ -127,8 +131,10 @@ export default class MDXRuntimeTest extends Component {
         </div>
       </Layout>
     );
-  }
 }
+
+// export default mdxFormHoc(MDXRuntimeTest, {});
+export default MDXRuntimeTest;
 
 export const pageQuery = graphql`
   query($id: String!) {
@@ -139,6 +145,7 @@ export const pageQuery = graphql`
       }
     }
     mdx(fields: { id: { eq: $id } }) {
+      ...TinaMdx
       fields {
         id
         title
